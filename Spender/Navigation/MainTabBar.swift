@@ -13,8 +13,8 @@ class MainTabBar: UITabBar {
     
     // MARK: - Constants
     private let addButtonImage = #imageLiteral(resourceName: "addButtonTabBar")
-    private let tabBarBackgroundColor = #colorLiteral(red: 0.9564778209, green: 0.9609039426, blue: 0.971724093, alpha: 1)
-    private let selectedBarButtonColor = #colorLiteral(red: 0.2053239644, green: 0.4410848022, blue: 0.2368885279, alpha: 1)
+    private let tabBarBackgroundColor = #colorLiteral(red: 0.9852560163, green: 0.9898150563, blue: 1, alpha: 1)
+    private let selectedBarButtonColor = #colorLiteral(red: 0.1854634285, green: 0.4102962017, blue: 0.2224472463, alpha: 1)
     private let unselectedBarButtonColor = #colorLiteral(red: 0.3989664614, green: 0.4103312194, blue: 0.4143762589, alpha: 1)
     
     // MARK: - LifeCycle
