@@ -11,6 +11,14 @@ class OverviewViewController: UIViewController {
     
     // MARK: - @IBOutlet
     @IBOutlet weak var customNavBarView: UIView!
+
+    @IBOutlet weak var incomeAmountLabel: UILabel!
+    @IBOutlet weak var expensesAmountLabel: UILabel!
+    @IBOutlet weak var balanceAmountLabel: UILabel!
+    
+    @IBOutlet weak var categoriesButton: UIButton!
+    @IBOutlet weak var listButton: UIButton!
+    
     
     // MARK: - ViewController
     override func viewDidLoad() {
@@ -32,5 +40,7 @@ class OverviewViewController: UIViewController {
     func setupCustomNavBar() {
         customNavBarView.addShadow()
         customNavBarView.addGradient(from: #colorLiteral(red: 0.8715779185, green: 0.9737123847, blue: 0.8044601083, alpha: 1), to: #colorLiteral(red: 0.5840260386, green: 0.6783261895, blue: 0.4990360141, alpha: 1), direction: .topLeftToBottomRight)
+        categoriesButton.layer.cornerRadius = categoriesButton.frame.height * 0.5
+        listButton.layer.cornerRadius = listButton.frame.height * 0.5
     }
 }
