@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -134,22 +135,44 @@
                                             <constraint firstAttribute="height" constant="60" id="yug-eb-WPI"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="eSb-2z-zmY" userLabel="ListCategoriesButtons Stack View">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eSb-2z-zmY" userLabel="ListCategoriesButtons Stack View">
                                         <rect key="frame" x="30" y="168" width="330" height="32"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAX-TD-mMM">
-                                                <rect key="frame" x="0.0" y="0.0" width="145.66666666666666" height="32"/>
-                                                <color key="backgroundColor" red="0.94901960784313721" green="1" blue="0.93333333333333335" alpha="0.82999999999999996" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="CATEGORIES">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cB6-8J-bL1">
-                                                <rect key="frame" x="184.66666666666663" y="0.0" width="145.33333333333337" height="32"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cB6-8J-bL1">
+                                                <rect key="frame" x="0.0" y="0.0" width="161" height="32"/>
                                                 <color key="backgroundColor" red="0.94901960780000005" green="1" blue="0.93333333330000001" alpha="0.82999999999999996" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="LIST">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="listButtonTabBar">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="  LIST">
+                                                            <attributes>
+                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectListView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wfi-tn-7Pi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aAX-TD-mMM">
+                                                <rect key="frame" x="169" y="0.0" width="161" height="32"/>
+                                                <color key="backgroundColor" red="0.94901960784313721" green="1" blue="0.93333333333333335" alpha="0.82999999999999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" image="categoryButtonTabBar">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="  CATEGORIES">
+                                                            <attributes>
+                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="selectCategoriesView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CFM-MQ-5Qr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -266,7 +289,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="categoryButtonTabBar" width="21.333333969116211" height="21.333333969116211"/>
         <image name="dollarStackTabBar" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="listButtonTabBar" width="21.333333969116211" height="21.333333969116211"/>
         <image name="profileButtonTabBar" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
