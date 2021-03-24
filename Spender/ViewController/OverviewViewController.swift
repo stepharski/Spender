@@ -19,6 +19,9 @@ class OverviewViewController: UIViewController {
     @IBOutlet weak var categoriesButton: UIButton!
     @IBOutlet weak var listButton: UIButton!
     
+    @IBOutlet weak var timelinePickerView: UIView!
+    @IBOutlet weak var timelinePickerLabel: UILabel!
+    
     // MARK: - Properties
     fileprivate lazy var constants = Constants()
     
@@ -31,9 +34,20 @@ class OverviewViewController: UIViewController {
         updateCategoriesListButtons(for: sender)
     }
     
+    @IBAction func showPreviousTimeline(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func showNextTimeline(_ sender: UIButton) {
+    }
+    
     // MARK: - ViewController
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         setupUI()
     }
     
@@ -51,6 +65,7 @@ class OverviewViewController: UIViewController {
     func setupUI() {
         setupCustomNavBar()
         updateCategoriesListButtons(for: listButton)
+        configureTimelineView()
     }
     
     func setupCustomNavBar() {
@@ -76,6 +91,11 @@ class OverviewViewController: UIViewController {
                 : self.constants.unselectedButtonColor
         }
     }
+    
+    func configureTimelineView() {
+        timelinePickerView.addRoundedShadow()
+        timelinePickerView.layer.cornerRadius = timelinePickerView.frame.height * 0.5
+    }
 }
 
 // MARK: - Constants
@@ -86,6 +106,6 @@ fileprivate extension OverviewViewController {
         let gradientDirection = GradientDirection.topLeftToBottomRight
         
         let selectedButtonColor = #colorLiteral(red: 0.9490196078, green: 1, blue: 0.9333333333, alpha: 1)
-        let unselectedButtonColor = #colorLiteral(red: 0.7882352941, green: 0.8588235294, blue: 0.7333333333, alpha: 1)
+        let unselectedButtonColor = #colorLiteral(red: 0.8309813142, green: 0.9030581117, blue: 0.7770924568, alpha: 1)
     }
 }

@@ -192,12 +192,61 @@
                                     <constraint firstAttribute="height" constant="210" id="wlf-WX-iaS"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVD-uA-iDk">
+                                <rect key="frame" x="20" y="230" width="350" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrq-bx-ZjP">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="g3u-uy-H9m"/>
+                                        </constraints>
+                                        <state key="normal" image="leftArrowButton"/>
+                                        <connections>
+                                            <action selector="showPreviousTimeline:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CLo-vg-3eV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrI-Me-EIa">
+                                        <rect key="frame" x="290" y="0.0" width="60" height="55"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="mHx-KC-caR"/>
+                                        </constraints>
+                                        <state key="normal" image="rightArrowButton"/>
+                                        <connections>
+                                            <action selector="showNextTimeline:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qdF-RO-WWC"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September 2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="7UD-LO-X9b">
+                                        <rect key="frame" x="70" y="0.0" width="210" height="55"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="xrI-Me-EIa" firstAttribute="leading" secondItem="7UD-LO-X9b" secondAttribute="trailing" constant="10" id="LCD-X5-0EW"/>
+                                    <constraint firstAttribute="bottom" secondItem="wrq-bx-ZjP" secondAttribute="bottom" id="d3f-lY-3Q3"/>
+                                    <constraint firstItem="wrq-bx-ZjP" firstAttribute="top" secondItem="iVD-uA-iDk" secondAttribute="top" id="dei-T6-BjE"/>
+                                    <constraint firstAttribute="height" constant="55" id="fIm-4R-Qe8"/>
+                                    <constraint firstAttribute="trailing" secondItem="xrI-Me-EIa" secondAttribute="trailing" id="hDD-Wa-ztr"/>
+                                    <constraint firstItem="xrI-Me-EIa" firstAttribute="top" secondItem="iVD-uA-iDk" secondAttribute="top" id="j0C-ks-Vhm"/>
+                                    <constraint firstAttribute="bottom" secondItem="xrI-Me-EIa" secondAttribute="bottom" id="jnJ-mW-3TN"/>
+                                    <constraint firstItem="wrq-bx-ZjP" firstAttribute="leading" secondItem="iVD-uA-iDk" secondAttribute="leading" id="nbk-RE-ba3"/>
+                                    <constraint firstAttribute="bottom" secondItem="7UD-LO-X9b" secondAttribute="bottom" id="shE-p1-xpG"/>
+                                    <constraint firstItem="7UD-LO-X9b" firstAttribute="top" secondItem="iVD-uA-iDk" secondAttribute="top" id="vBG-gb-tuy"/>
+                                    <constraint firstItem="7UD-LO-X9b" firstAttribute="leading" secondItem="wrq-bx-ZjP" secondAttribute="trailing" constant="10" id="zBH-dm-H21"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96120663521277327" green="0.95656312489773576" blue="0.96585014552781079" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="nxe-Pp-2hj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2zI-AX-MEH"/>
                             <constraint firstItem="nxe-Pp-2hj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8hH-VM-npB"/>
+                            <constraint firstItem="iVD-uA-iDk" firstAttribute="top" secondItem="nxe-Pp-2hj" secondAttribute="bottom" constant="20" id="Cmo-Qa-zYb"/>
+                            <constraint firstItem="iVD-uA-iDk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jvg-lv-sTu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iVD-uA-iDk" secondAttribute="trailing" constant="20" id="RYx-Kj-dYq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nxe-Pp-2hj" secondAttribute="trailing" id="v3l-5W-0UO"/>
                         </constraints>
                     </view>
@@ -210,6 +259,8 @@
                         <outlet property="expensesAmountLabel" destination="uYW-d0-VuP" id="ray-ce-HpQ"/>
                         <outlet property="incomeAmountLabel" destination="nqL-5I-1tE" id="OOH-HD-c9f"/>
                         <outlet property="listButton" destination="cB6-8J-bL1" id="8vh-LV-Qvh"/>
+                        <outlet property="timelinePickerLabel" destination="7UD-LO-X9b" id="kmC-Uw-A4Y"/>
+                        <outlet property="timelinePickerView" destination="iVD-uA-iDk" id="xPd-Nu-zFu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -291,8 +342,10 @@
     <resources>
         <image name="categoryButtonTabBar" width="21.333333969116211" height="21.333333969116211"/>
         <image name="dollarStackTabBar" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="leftArrowButton" width="32" height="32"/>
         <image name="listButtonTabBar" width="21.333333969116211" height="21.333333969116211"/>
         <image name="profileButtonTabBar" width="32" height="32"/>
+        <image name="rightArrowButton" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

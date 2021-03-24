@@ -21,6 +21,19 @@ extension UIView {
         layer.shadowPath = shadowPath.cgPath
     }
     
+    func addRoundedShadow() {
+        let shadowPath = UIBezierPath(rect: CGRect(x: 20, y: frame.height - 18,
+                                                   width: frame.width - 20,
+                                                   height: 20))
+        layer.cornerRadius = 2
+        layer.shadowColor = #colorLiteral(red: 0.2226503789, green: 0.2219562531, blue: 0.2330701947, alpha: 1).cgColor
+        layer.shadowOffset = CGSize(width: 0.5, height: 2)
+        layer.shadowOpacity = 0.4
+        layer.shadowRadius = 10
+        layer.masksToBounds = false
+        layer.shadowPath = shadowPath.cgPath
+    }
+    
     func addGradient(from color1: UIColor, to color2: UIColor, direction: GradientDirection) {
         let gradient = CAGradientLayer()
         gradient.frame = bounds
