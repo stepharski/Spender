@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,11 @@
 		5F3BDF7F2605130A00A37064 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3BDF7E2605130A00A37064 /* ProfileViewController.swift */; };
 		5F3BDF84260528CE00A37064 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3BDF83260528CE00A37064 /* MainTabBar.swift */; };
 		5F3BDF8C2607BBA500A37064 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3BDF8B2607BBA500A37064 /* UIView+.swift */; };
+		5F3BDFBB2613A10C00A37064 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3BDFB92613A10C00A37064 /* TransactionTableViewCell.swift */; };
+		5F3BDFBC2613A10C00A37064 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F3BDFBA2613A10C00A37064 /* TransactionTableViewCell.xib */; };
+		5F3BDFC62613A5DF00A37064 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3BDFC52613A5DF00A37064 /* Reusable.swift */; };
+		5F3BDFCA2613A60000A37064 /* ReusableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3BDFC92613A60000A37064 /* ReusableTableView.swift */; };
+		5F3BDFCD2613A62800A37064 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3BDFCC2613A62800A37064 /* NibLoadable.swift */; };
 		5FA899002604FC3D00AD46E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA898FF2604FC3D00AD46E4 /* AppDelegate.swift */; };
 		5FA899022604FC3D00AD46E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA899012604FC3D00AD46E4 /* SceneDelegate.swift */; };
 		5FA899072604FC3D00AD46E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA899052604FC3D00AD46E4 /* Main.storyboard */; };
@@ -28,6 +33,11 @@
 		5F3BDF7E2605130A00A37064 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5F3BDF83260528CE00A37064 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		5F3BDF8B2607BBA500A37064 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		5F3BDFB92613A10C00A37064 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		5F3BDFBA2613A10C00A37064 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
+		5F3BDFC52613A5DF00A37064 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		5F3BDFC92613A60000A37064 /* ReusableTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTableView.swift; sourceTree = "<group>"; };
+		5F3BDFCC2613A62800A37064 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		5FA898FC2604FC3D00AD46E4 /* Spender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA898FF2604FC3D00AD46E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FA899012604FC3D00AD46E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,9 +82,53 @@
 		5F3BDF8A2607BB8200A37064 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5F3BDF8B2607BBA500A37064 /* UIView+.swift */,
+				5F3BDFC22613A5B400A37064 /* UI */,
+				5F3BDFC42613A5BB00A37064 /* Reusable */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5F3BDFB62613A07600A37064 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F3BDFB72613A08600A37064 /* TableViewCells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5F3BDFB72613A08600A37064 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				5F3BDFB82613A0DC00A37064 /* TransactionTableViewCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		5F3BDFB82613A0DC00A37064 /* TransactionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5F3BDFB92613A10C00A37064 /* TransactionTableViewCell.swift */,
+				5F3BDFBA2613A10C00A37064 /* TransactionTableViewCell.xib */,
+			);
+			path = TransactionTableViewCell;
+			sourceTree = "<group>";
+		};
+		5F3BDFC22613A5B400A37064 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5F3BDF8B2607BBA500A37064 /* UIView+.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5F3BDFC42613A5BB00A37064 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				5F3BDFC52613A5DF00A37064 /* Reusable.swift */,
+				5F3BDFC92613A60000A37064 /* ReusableTableView.swift */,
+				5F3BDFCC2613A62800A37064 /* NibLoadable.swift */,
+			);
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 		5FA898F32604FC3D00AD46E4 = {
@@ -101,6 +155,7 @@
 				5FA898FF2604FC3D00AD46E4 /* AppDelegate.swift */,
 				5FA899012604FC3D00AD46E4 /* SceneDelegate.swift */,
 				5FFF46AD2605071B00388C26 /* ViewController */,
+				5F3BDFB62613A07600A37064 /* View */,
 				5F3BDF8A2607BB8200A37064 /* Extensions */,
 				5F3BDF822605289E00A37064 /* Navigation */,
 				5FA899052604FC3D00AD46E4 /* Main.storyboard */,
@@ -141,6 +196,7 @@
 				5FA898F82604FC3D00AD46E4 /* Sources */,
 				5FA898F92604FC3D00AD46E4 /* Frameworks */,
 				5FA898FA2604FC3D00AD46E4 /* Resources */,
+				9DF352674C4DEA6E82A59287 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +246,7 @@
 			files = (
 				5FA8990F2604FC3E00AD46E4 /* LaunchScreen.storyboard in Resources */,
 				5FA8990C2604FC3E00AD46E4 /* Assets.xcassets in Resources */,
+				5F3BDFBC2613A10C00A37064 /* TransactionTableViewCell.xib in Resources */,
 				5FA899072604FC3D00AD46E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +276,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9DF352674C4DEA6E82A59287 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spender/Pods-Spender-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spender/Pods-Spender-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Spender/Pods-Spender-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -230,9 +304,13 @@
 				5F3BDF7C2605130000A37064 /* AddItemViewController.swift in Sources */,
 				5F3BDF84260528CE00A37064 /* MainTabBar.swift in Sources */,
 				5FA8990A2604FC3D00AD46E4 /* Spender.xcdatamodeld in Sources */,
+				5F3BDFC62613A5DF00A37064 /* Reusable.swift in Sources */,
 				5F3BDF8C2607BBA500A37064 /* UIView+.swift in Sources */,
 				5F3BDF79260512F500A37064 /* OverviewViewController.swift in Sources */,
 				5FA899002604FC3D00AD46E4 /* AppDelegate.swift in Sources */,
+				5F3BDFCA2613A60000A37064 /* ReusableTableView.swift in Sources */,
+				5F3BDFCD2613A62800A37064 /* NibLoadable.swift in Sources */,
+				5F3BDFBB2613A10C00A37064 /* TransactionTableViewCell.swift in Sources */,
 				5FA899022604FC3D00AD46E4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: b129c0236eac04ea589ed49f38107c8bd889fb58
+PODS:
+  - ViewControllerDescribable (1.0.2)
+
+DEPENDENCIES:
+  - ViewControllerDescribable
+
+SPEC REPOS:
+  trunk:
+    - ViewControllerDescribable
+
+SPEC CHECKSUMS:
+  ViewControllerDescribable: 10c8facb097b1fa8cf66b19417524a081779a28c
+
+PODFILE CHECKSUM: b955c06862488edaaade60ba80a55734d0ee0c60
 
 COCOAPODS: 1.10.1

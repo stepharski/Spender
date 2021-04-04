@@ -22,6 +22,8 @@ class OverviewViewController: UIViewController {
     @IBOutlet weak var timelinePickerView: UIView!
     @IBOutlet weak var timelinePickerLabel: UILabel!
     
+    @IBOutlet weak var tableView: UITableView!
+    
     // MARK: - Properties
     fileprivate lazy var constants = Constants()
     
@@ -44,6 +46,8 @@ class OverviewViewController: UIViewController {
     // MARK: - ViewController
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureTableView()
     }
     
     override func viewWillLayoutSubviews() {
@@ -96,6 +100,13 @@ class OverviewViewController: UIViewController {
         timelinePickerView.addRoundedShadow()
         timelinePickerView.layer.cornerRadius = timelinePickerView.frame.height * 0.5
     }
+    
+    func configureTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        tableView.register(TransactionTableViewCell.self)
+    }
 }
 
 // MARK: - Constants
@@ -108,4 +119,26 @@ fileprivate extension OverviewViewController {
         let selectedButtonColor = #colorLiteral(red: 0.9490196078, green: 1, blue: 0.9333333333, alpha: 1)
         let unselectedButtonColor = #colorLiteral(red: 0.8309813142, green: 0.9030581117, blue: 0.7770924568, alpha: 1)
     }
+}
+
+// MARK: - UITableViewDataSource
+extension OverviewViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(for: indexPath, with: TransactionTableViewCell.self)
+        
+        return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension OverviewViewController: UITableViewDelegate {
+    
 }
